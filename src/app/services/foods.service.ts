@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
+import { BehaviorSubject, Observable } from "rxjs";
 
 export interface IFoodList {
   id: number;
@@ -14,11 +14,21 @@ export interface IFoodList {
   providedIn: "root",
 })
 export class FoodsService {
-  baseURL = "https://hamburgueria-kenzie-json-serve.herokuapp.com";
+  private baseURL = "https://hamburgueria-kenzie-json-serve.herokuapp.com";
+  private filter: BehaviorSubject<string> = new BehaviorSubject<string>("");
+  public filter$ = this.filter.asObservable();
 
   constructor(private http: HttpClient) {}
 
   getFoodList(): Observable<IFoodList[]> {
     return this.http.get<IFoodList[]>(`${this.baseURL}/products`);
+  }
+
+  setFilter(filter: string): void {
+    this.filter.next(filter);
+  }
+
+  clearFilter(): void {
+    this.filter.next("");
   }
 }
