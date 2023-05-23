@@ -2,8 +2,8 @@
   <div class="container-fluid">
     <nav class="navbar">
       <div class="d-flex gap-1">
-        <h1 class="fs-4 fw-bold m-0">CJ</h1>
-        <h1 class="fs-4 fw-bold m-0">BURGUER</h1>
+        <h1 class="fs-4 fw-bold m-0 text-primary">CJ</h1>
+        <h1 class="fs-4 fw-bold m-0 text-secondary">BURGUER</h1>
       </div>
 
       <div class="position-relative d-none d-sm-flex">
@@ -11,11 +11,15 @@
           class="form-control"
           placeholder="Digitar Pesquisa"
           type="text"
+          [(ngModel)]="foodName"
         />
         <button
-          class="btn btn-primary position-absolute top-50 end-0 me-1 translate-middle-y"
+          class="btn btn-primary position-absolute top-50 end-0 translate-middle-y"
+          (click)="getFoodName()"
+          aria-label="pesquisar produto"
+          title="pesquisar produto"
         >
-          <i class="bi bi-search"></i>
+          <i class="bi bi-search text-white"></i>
         </button>
       </div>
     </nav>
