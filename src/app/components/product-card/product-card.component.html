@@ -1,0 +1,21 @@
+<div class="card">
+  <img
+    [src]="img"
+    class="card-img-top object-fit-scale"
+    height="200px"
+    [alt]="name"
+  />
+  <div class="card-body">
+    <h4 class="card-title fs-6 fw-bold">{{ name }}</h4>
+    <p class="card-text fs-6">
+      {{ category }}
+    </p>
+    <button
+      class="btn btn-primary text-white"
+      aria-label="comprar produto"
+      title="comprar produto"
+    >
+      Comprar
+    </button>
+  </div>
+</div>
