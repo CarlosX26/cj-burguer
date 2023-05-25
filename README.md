@@ -1,27 +1,33 @@
-# CjBurguer
+# CJ BURGUER
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+Esta é uma aplicação Angular que apresenta uma vitrine de produtos de uma lanchonete. O objetivo deste projeto era obter conhecimento sobre o framework CSS Bootstrap e, por meio dele, compreender seu funcionamento. Ao trabalhar nesse projeto, pude adquirir uma compreensão mais profunda da tecnologia.
 
-## Development server
+## Rodando localmente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Clone o projeto
 
-## Code scaffolding
+```bash
+  git clone git@github.com:CarlosX26/cj-burguer.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Entre no diretório do projeto
 
-## Build
+```bash
+  cd cj-burguer
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Instale as dependências
 
-## Running unit tests
+```bash
+  npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Inicie o servidor
 
-## Running end-to-end tests
+```bash
+  npm run start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Stack utilizada
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Front-end:** Angular, SCSS, Bootstrap e TypeScript
