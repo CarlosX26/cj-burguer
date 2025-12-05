@@ -13,10 +13,7 @@
     <app-product-card
       class="col"
       *ngFor="let food of filteredFoodList"
-      [img]="food.img"
-      [name]="food.name"
-      [price]="food.price"
-      [category]="food.category"
+      [product]="food"
     ></app-product-card>
   </ul>
 </div>

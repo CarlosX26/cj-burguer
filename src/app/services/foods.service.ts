@@ -14,14 +14,13 @@ export interface IFoodList {
   providedIn: "root",
 })
 export class FoodsService {
-  private baseURL = "https://hamburgueria-kenzie-json-serve.herokuapp.com";
   private filter: BehaviorSubject<string> = new BehaviorSubject<string>("");
   public filter$ = this.filter.asObservable();
 
   constructor(private http: HttpClient) {}
 
   getFoodList(): Observable<IFoodList[]> {
-    return this.http.get<IFoodList[]>(`${this.baseURL}/products`);
+    return this.http.get<IFoodList[]>('/assets/mock-products.json');
   }
 
   setFilter(filter: string): void {
